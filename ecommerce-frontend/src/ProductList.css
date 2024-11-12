@@ -1,0 +1,64 @@
+/* Table container to center the table and add spacing */
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Header styles */
+  thead th {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Row styles */
+  tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Hover effect on rows */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Zebra striping for rows */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Optional: Responsive styles */
+  @media (max-width: 600px) {
+    table {
+      width: 100%;
+    }
+    thead {
+      display: none;
+    }
+    tbody td {
+      display: block;
+      text-align: right;
+      padding: 10px;
+      border: none;
+      position: relative;
+    }
+    tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  
